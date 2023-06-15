@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AstroQA.TestSdk.Common\AstroQA.TestSdk.Common.csproj" />
     <ProjectReference Include="..\AstroQA.TestSdk.Database\AstroQA.TestSdk.Database.csproj" />
     <ProjectReference Include="..\AstroShop.TestSdk.Domain\AstroShop.TestSdk.Domain.csproj" />
   </ItemGroup>
