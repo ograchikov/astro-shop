@@ -9,13 +9,14 @@ public class CurrencyParser
 	{
 		var usCulture = CultureInfo.CreateSpecificCulture("en-US");
 		if (!decimal.TryParse(
-			    currencyString, 
+			    currencyString,
 			    NumberStyles.Currency,
-			    usCulture, 
+			    usCulture,
 			    out var currencyValue))
 		{
 			throw new InvalidArgumentException("Invalid currency string format.", nameof(currencyString));
 		}
+
 		return currencyValue;
 	}
 }

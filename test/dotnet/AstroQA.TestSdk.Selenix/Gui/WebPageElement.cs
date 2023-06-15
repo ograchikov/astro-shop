@@ -5,11 +5,11 @@ using OpenQA.Selenium;
 
 public abstract class WebPageElement
 {
-    protected readonly IWebDriver _driver;
-    protected readonly ISelenuimWaiter _waiter;
+	protected readonly IWebDriver _driver;
+	protected readonly ISelenuimWaiter _waiter;
 
 	protected WebPageElement(
-		IWebDriver driver, 
+		IWebDriver driver,
 		ISelenuimWaiter waiter)
 	{
 		_driver = driver;

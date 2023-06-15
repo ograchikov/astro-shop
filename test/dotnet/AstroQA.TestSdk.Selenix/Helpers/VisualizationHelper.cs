@@ -4,16 +4,16 @@
 
 	public class VisualizationHelper : IVisualizationHelper
 	{
-	    private readonly IJavaScriptHelper _javaScript;
+		private readonly IJavaScriptHelper _javaScript;
 
-        public VisualizationHelper(IJavaScriptHelper javaScript)
-        {
-	        _javaScript = javaScript;
-        }
+		public VisualizationHelper(IJavaScriptHelper javaScript)
+		{
+			_javaScript = javaScript;
+		}
 
-        public void HighLight(IWebElement element) =>
+		public void HighLight(IWebElement element) =>
 			_javaScript.ExecuteScript(
-			    "arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", 
-			    element);
+				"arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",
+				element);
 	}
 }

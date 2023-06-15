@@ -13,7 +13,7 @@ public class YamlDataAdapter<TData> : IDataAdapter<TData>
 
 		Guard.NotNullOrWhitespace(yaml, nameof(yaml));
 		var deserializer = new DeserializerBuilder().Build();
-		return deserializer.Deserialize<TData>(yaml) ?? 
+		return deserializer.Deserialize<TData>(yaml) ??
 		       throw new EntityDeserializationException(
 			       typeof(TData).Name,
 			       $"File path: '{filePath}'.");

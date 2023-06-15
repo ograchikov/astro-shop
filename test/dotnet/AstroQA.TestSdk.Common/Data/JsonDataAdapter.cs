@@ -12,7 +12,7 @@ public class JsonDataAdapter<TData> : IDataAdapter<TData>
 		var json = await File.ReadAllTextAsync(filePath);
 
 		Guard.NotNullOrWhitespace(json, nameof(json));
-		return JsonConvert.DeserializeObject<TData>(json) ?? 
+		return JsonConvert.DeserializeObject<TData>(json) ??
 		       throw new EntityDeserializationException(
 			       typeof(TData).Name,
 			       $"File path: '{filePath}'.");

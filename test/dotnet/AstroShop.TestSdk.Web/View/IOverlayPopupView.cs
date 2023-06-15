@@ -2,6 +2,6 @@
 
 public interface IOverlayPopupView
 {
-    void CloseBySideClick();
-    void CloseByEscape();
+	void CloseBySideClick();
+	void CloseByEscape();
 }

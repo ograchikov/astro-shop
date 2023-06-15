@@ -6,5 +6,5 @@ public interface IPopupGalleryView : IOverlayPopupView
 {
 	ProductInfo GetCurrentProductInfo();
 	IPopupGalleryView NavigateLeft();
-    IPopupGalleryView NavigateRight();
+	IPopupGalleryView NavigateRight();
 }
