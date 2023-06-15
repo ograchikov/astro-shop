@@ -1,0 +1,21 @@
+﻿Profile:
+  - Name: Latest
+    Browsers:
+      - BrowserName: Chrome
+        Versions:
+          - Latest
+      - BrowserName: Firefox
+        Versions:
+          - Latest
+  - Name: Legacy
+    Browsers:
+      - BrowserName: Chrome
+        Versions:
+          - 108
+          - 107
+          - 106
+      - BrowserName: Firefox
+        Versions:
+          - 112.0
+          - 111.0
+          - 110.0

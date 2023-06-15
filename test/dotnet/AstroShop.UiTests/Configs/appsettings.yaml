@@ -1,0 +1,6 @@
+﻿# Common Settings
+WebDriverTimeoutSeconds: 30
+WebDriverSleepTimeMilliseconds: 500
+
+# SUT
+AstroShopBaseUrl: "file:///x:/path-to-repository/src/web-frontend/index.html"

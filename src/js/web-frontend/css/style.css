@@ -1,0 +1,61 @@
+/* Reset some default styles of the browser */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Define a dark background for the whole page */
+body {
+	background-color: black;
+	color: #eee;
+	font-family: Arial, sans-serif;
+	margin: 80px 0 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: black;
+	padding: 20px;
+	z-index: 9999;
+}
+
+header h1 {
+	margin: 0;
+	color: #eee;
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+	text-align: center;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+/* Define styles for the product and cart lists */
+ul {
+	list-style-type: none;
+	margin-bottom: 20px;
+}
+
+/* Define styles for each product and cart item */
+li {
+	background-color: #444;
+	border: 1px solid #555;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+/* Clear floats */
+li::after {
+	content: "";
+	clear: both;
+	display: table;
+}

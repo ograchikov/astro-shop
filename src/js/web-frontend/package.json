@@ -1,0 +1,14 @@
+{
+  "name": "astroshop",
+  "version": "0.0.1",
+  "description": "Test frameworks demo.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Oleg Grachikov",
+  "license": "ISC"
+}

@@ -1,0 +1,40 @@
+model Cart =
+	type StorefrontView =
+		Button Cart
+
+	state CartButtonState =
+		| Default -> Border.IsVisible == false
+		| Highlighted ->
+			Border.IsVisible == true
+			Border.Color == Green
+
+	type CartView =
+		int ProductCount
+		decimal TotalPrice
+		Product[] Products
+
+	state CartProducts =
+		| Empty -> Cart.ProductCount == 0
+		| NotEmpty -> Cart.ProductCount > 0
+
+	state CartProductsView =
+		| Empty -> CartButtonState == Default
+		| NotEmpty -> CartButtonState == Highlighted
+
+	action Cart =
+		| AddProduct
+		| RemoveProduct
+		| Checkout
+		| Close
+
+	state CartViewState =
+		| Opened
+		| Closed
+
+	Cart
+		| Checkout ->
+			ProductList =
+				| Empty -> TotalPrice == 0
+				| NotEmpty -> sum Cart.Products:Price
+
+	action ProductList = RemoveProduct: ProductId -> void

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Astro Art Shop</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/shop.css" />
+	<link rel="stylesheet" type="text/css" href="css/cart.css" />
+</head>
+
+<body>
+	<header>
+		<h1>Welcome to Astro Art Shop</h1>
+		<div class="cart-button-container">
+			<button id="cart-button">Cart</button>
+		</div>
+	</header>
+	<ul id="product-list"></ul>
+	<div id="cart-overlay" class="cart-overlay overlay">
+		<div id="cart-popup" class="popup">
+			<div class="popup-header">
+				<h2>Cart</h2>
+			</div>
+			<div class="popup-content">
+				<ul id="cart-list"></ul>
+			</div>
+			<div class="popup-footer">
+				<button id="checkout-button">Checkout</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/shop.js"></script>
+	<script src="js/cart.js"></script>
+</body>
+
+</html>
