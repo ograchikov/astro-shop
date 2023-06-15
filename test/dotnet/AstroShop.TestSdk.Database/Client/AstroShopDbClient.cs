@@ -24,9 +24,9 @@ public class AstroShopDbClient : IAstroShopDbClient
 		await using var context = _factory.CreateContext();
 		return await _waiter
 			.WaitForEntity(async () => await context.Products
-			.AsNoTracking()
-			.FirstOrDefaultAsync(x => x.ProductId == productId)
-			.ConfigureAwait(false));
+				.AsNoTracking()
+				.FirstOrDefaultAsync(x => x.ProductId == productId)
+				.ConfigureAwait(false));
 	}
 
 	public async Task<ProductInfo?> GetProduct(int productId)
