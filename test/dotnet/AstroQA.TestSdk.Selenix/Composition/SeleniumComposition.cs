@@ -89,11 +89,7 @@ public static class SeleniumComposition
 		containerBuilder
 			.RegisterType<SelenuimWaiter>()
 			.As<ISelenuimWaiter>()
-			.InstancePerLifetimeScope();		
-		//containerBuilder
-		//	.RegisterType<WebDriverWait>()
-		//	.As<IWait<IWebDriver>>()
-		//	.InstancePerLifetimeScope();
+			.InstancePerLifetimeScope();
 
 		containerBuilder
 			.Register(c => new WebDriverWait(
@@ -103,16 +99,6 @@ public static class SeleniumComposition
 				c.Resolve<WebDriverSleepTime>().Value))
 			.As<IWait<IWebDriver>>()
 			.InstancePerLifetimeScope();
-
-		//containerBuilder.Register(c => new SelenuimWaiter(
-		//		c.Resolve<WebDriver>(),
-		//		c.Resolve<ITestLogger>(),
-		//		c.Resolve<IJavaScriptHelper>(),
-		//		defaultSleepTime,
-		//		defaultTimeout,
-		//		customClock))
-		//	.As<ISelenuimWaiter>()
-		//	.InstancePerLifetimeScope();
 
 		return containerBuilder;
 	}

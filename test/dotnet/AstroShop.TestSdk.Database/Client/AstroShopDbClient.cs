@@ -14,21 +14,21 @@ public class AstroShopDbClient : IAstroShopDbClient
 		_factory = factory;
 	}
 
-	public async Task<IReadOnlyCollection<ProductInfo>> GetProducts()
-	{
-		await using var context = _factory.CreateContext();
-		return await context.Products
-			.AsNoTracking()
-			.ToListAsync()
-			.ConfigureAwait(false);
-	}
-
 	public async Task<ProductInfo?> GetProduct(int productId)
 	{
 		await using var context = _factory.CreateContext();
 		return await context.Products
 			.AsNoTracking()
 			.FirstOrDefaultAsync(x => x.ProductId == productId)
+			.ConfigureAwait(false);
+	}
+
+	public async Task<IReadOnlyCollection<ProductInfo>> GetProducts()
+	{
+		await using var context = _factory.CreateContext();
+		return await context.Products
+			.AsNoTracking()
+			.ToListAsync()
 			.ConfigureAwait(false);
 	}
 
