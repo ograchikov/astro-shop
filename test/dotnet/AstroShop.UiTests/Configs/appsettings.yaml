@@ -3,4 +3,4 @@ WebDriverTimeoutSeconds: 30
 WebDriverSleepTimeMilliseconds: 500
 
 # SUT
-AstroShopBaseUrl: "file:///x:/path-to-repository/src/web-frontend/index.html"
+AstroShopBaseUrl: "file:///D:/prj/code/astro/src/js/web-frontend/index.html"
