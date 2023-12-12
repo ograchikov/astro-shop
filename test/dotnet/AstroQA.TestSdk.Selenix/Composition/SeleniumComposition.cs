@@ -17,12 +17,12 @@ public static class SeleniumComposition
 		WebDriverType driverType) =>
 		driverType switch
 		{
-			WebDriverType.Chrome => AddChromeDriverPeLifetimeScope(containerBuilder),
-			WebDriverType.Firefox => AddFirefoxDriverPeLifetimeScope(containerBuilder),
+			WebDriverType.Chrome => AddChromeDriverPerLifetimeScope(containerBuilder),
+			WebDriverType.Firefox => AddFirefoxDriverPerLifetimeScope(containerBuilder),
 			_ => throw new ArgumentOutOfRangeException(nameof(driverType), driverType, null)
 		};
 
-	public static ContainerBuilder AddChromeDriverPeLifetimeScope(
+	public static ContainerBuilder AddChromeDriverPerLifetimeScope(
 		this ContainerBuilder containerBuilder)
 	{
 		containerBuilder
@@ -33,7 +33,7 @@ public static class SeleniumComposition
 		return containerBuilder;
 	}
 
-	public static ContainerBuilder AddFirefoxDriverPeLifetimeScope(
+	public static ContainerBuilder AddFirefoxDriverPerLifetimeScope(
 		this ContainerBuilder containerBuilder)
 	{
 		containerBuilder
